@@ -46,10 +46,11 @@ window.onload = (async function() {
   }
 
   const product  = await Promise.all([
-    fetch_products('http://localhost:3001/fK/affiliate-api.flipkart.net/affiliate/products/1'),
-    fetch_products('http://localhost:3001/fK/affiliate-api.flipkart.net/affiliate/products/2'),
-    fetch_products('http://localhost:3001/fK/affiliate-api.flipkart.net/affiliate/products/3'),
-    fetch_products('http://localhost:3001/fK/affiliate-api.flipkart.net/affiliate/products/4'),
+    //fetch_products('http://localhost:3001/fK/affiliate-api.flipkart.net/affiliate/products/1'),
+    //fetch_products('http://localhost:3001/fK/affiliate-api.flipkart.net/affiliate/products/2'),
+    //fetch_products('http://localhost:3001/fK/affiliate-api.flipkart.net/affiliate/products/3'),
+    //fetch_products('http://localhost:3001/fK/affiliate-api.flipkart.net/affiliate/products/4'),
+	Promise.resolve("Resolved! Never bother parameter")
   ]);
 
   const db = await open('products_db', 1, onupgradeneeded_version1);

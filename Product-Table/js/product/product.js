@@ -33,9 +33,12 @@ var PRODUCT = (function(partial, proto, cart) {
       const store = transaction.objectStore('products_os');
       data.forEach(function(value) {
         let newItem = {
-          title: value.productInfoList[0].productBaseInfoV1.title,
-          price: value.productInfoList[0].productBaseInfoV1.flipkartSellingPrice.amount,
-          inStock: value.productInfoList[0].productBaseInfoV1.inStock,
+          //title: value.productInfoList[0].productBaseInfoV1.title,
+          //price: value.productInfoList[0].productBaseInfoV1.flipkartSellingPrice.amount,
+          //inStock: value.productInfoList[0].productBaseInfoV1.inStock,
+          title: "Hard Coded Title",
+          price: "Hard Coded price",
+          inStock: "Hard Coded inStock",
         };
 
         // Make a request to add our newItem object to the object store
